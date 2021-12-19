@@ -3,8 +3,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
 import { WorkGridItem } from '../components/grid-item'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.PNG'
+import thumbWalknote from '../public/images/works/walknote_eyecatch.PNG'
 
 const Works = () => {
   return (
