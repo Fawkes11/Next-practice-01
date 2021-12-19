@@ -1,0 +1,31 @@
+{
+  "name": "my-web-page",
+  "version": "1.0.0",
+  "description": "Hessler's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Hessler Inampuez",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
+    "@chakra-ui/react": "^1.7.2",
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^5.4.1",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "three": "^0.135.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.0",
+    "eslint-config-next": "^12.0.7",
+    "prettier": "^2.5.1"
+  }
+}
