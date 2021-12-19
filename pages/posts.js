@@ -3,7 +3,7 @@ import Layout from "../components/layouts/article"
 import Section from "../components/section"
 import {GridItem} from '../components/grid-item'
 
-import thumb from '../public/images/works/inkdrop_eyecatch.png'
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
 const Posts = () => (
     <Layout title='posts'>
@@ -13,7 +13,7 @@ const Posts = () => (
             </Heading>
             <Section delay={0.1}>
                 <SimpleGrid columns={[1,2,2]} gap={6}>
-                    <GridItem title='My Fish workflow' thumbnail={thumb}/>
+                    <GridItem title='My Fish workflow' thumbnail={thumbInkdrop}/>
                 </SimpleGrid>
             </Section>
         </Container>
