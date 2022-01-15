@@ -1,7 +1,9 @@
-import { Text, useColorModeValue } from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import Image from "next/image";
-import Link from "next/link";
+import { Text, useColorModeValue } from '@chakra-ui/react'
+import { Icon } from '@chakra-ui/icon'
+import { FiHome, FiGithub } from 'react-icons/fi'
+import styled from '@emotion/styled'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const LogoBox = styled.span`
 font-size: 16px;
@@ -13,24 +15,18 @@ align-items; center;
 }
 `
 
-
 const Logo = () => {
-    const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png` 
-    return (
-        <Link href='/'>
-            <a>
-                <LogoBox>
-                    <Image src={footPrintImg} width={20} height={20} alt='logo'/>
-                    <Text
-                    color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                    ml={3}
-                    >
-                        Home
-                    </Text>
-                </LogoBox>
-            </a>
-        </Link>
-    )
+  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  return (
+    <Link href="/">
+      <a>
+        <LogoBox>
+          <Icon as={FiHome} fontSize={20} me={2} />
+          Home
+        </LogoBox>
+      </a>
+    </Link>
+  )
 }
 
 export default Logo

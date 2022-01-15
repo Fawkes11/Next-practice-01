@@ -3,41 +3,47 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
 import { WorkGridItem } from '../components/grid-item'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.PNG'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.PNG'
+import thumbRestaurant from '../public/images/works/restaurant_preview.png'
+import thumbFyloVue from '../public/images/works/fylo_vue_preview.png'
+import thumbHuddleReact from '../public/images/works/huddle_react_preview.png'
+import HeadSection from '../components/headSection'
 
 const Works = () => {
   return (
-    <Layout>
+    <Layout title="Works">
       <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
-          Works
-        </Heading>
+        <HeadSection delay={0.1}>
+          <Heading as="h3" textAlign="center" fontSize={20} mb={4}>
+            Works
+          </Heading>
+        </HeadSection>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
-            <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-              A markdown note-taking app with 100+ encrypted data sync support
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="restaurant"
+              title="Restaurant"
+              thumbnail={thumbRestaurant}
+            >
+              An ecommerce for an Italian food restaurant
             </WorkGridItem>
           </Section>
 
-          <Section>
-            <WorkGridItem
-              id="walknote"
-              title="walknote"
-              thumbnail={thumbWalknote}
-            >
-              Music recommendation app for Android
+          <Section delay={0.1}>
+            <WorkGridItem id="fylovue" title="Fylo" thumbnail={thumbFyloVue}>
+              Landing page layout made in vue js, it's a frontendmentor
+              challenge
             </WorkGridItem>
           </Section>
 
-          <Section>
+          <Section delay={0.1}>
             <WorkGridItem
-              id="walknote"
-              title="walknote"
-              thumbnail={thumbWalknote}
+              id="huddlevue"
+              title="Huddle"
+              thumbnail={thumbHuddleReact}
             >
-              Music recommendation app for Android
+              Landing page layout made in vue js, it's a frontendmentor
+              challenge
             </WorkGridItem>
           </Section>
         </SimpleGrid>

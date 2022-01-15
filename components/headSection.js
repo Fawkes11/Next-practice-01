@@ -7,15 +7,15 @@ const StyleDiv = chakra(motion.div, {
   }
 })
 
-const Section = ({ children, delay = 0 }) => (
+const HeadSection = ({ children, delay = 0 }) => (
   <StyleDiv
-    initial={{ x: -100, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay, type: 'spring', stiffness: 90 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.8, delay }}
     mb={6}
   >
     {children}
   </StyleDiv>
 )
 
-export default Section
+export default HeadSection
