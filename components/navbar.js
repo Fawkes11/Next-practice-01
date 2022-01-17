@@ -1,104 +1,121 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NextLink from 'next/link'
 import Logo from './logo'
-import { Container, Box, Link, Stack, Flex, Menu, MenuItem, MenuList, MenuButton, IconButton, useColorModeValue } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import {
+  Container,
+  Box,
+  Button,
+  Link,
+  Stack,
+  Flex,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  IconButton,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useColorModeValue
+} from '@chakra-ui/react'
+import ElectricMenu from './electric-menu'
 import ThemeToggleButton from './theme-toggle-button'
+import { FiGithub } from 'react-icons/fi'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Icon } from '@chakra-ui/icon'
+import { useDisclosure } from '@chakra-ui/hooks'
+import Modal from './modal'
 
+export const LinkItem = ({ href, path, children }) => {
+  const active = path === href
+  /* const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900') */
 
-const LinkItem = ({href, path, children}) =>{
-    const active = path === href
-    const inactiveColor =  useColorModeValue('gray.200','whiteAlpha.900')
-
-    return (
-        <NextLink href={href}>
-            <Link p={2}
-            bg={active? 'glassTeal': undefined}
-            color={active? '#202023': inactiveColor}
-            >
-                {children}    
-            </Link>
-        </NextLink>
-    )
+  return (
+    <NextLink href={href}>
+      <Link
+        px={5}
+        py={2}
+        border={active ? '1px solid #01a9c1' : undefined}
+        borderRadius="5px"
+        /* bg={active ? 'glassTeal' : undefined} */
+        color={active ? '#01a9c1' : '#f4f5f5'}
+        /* _hover={'textDecoration: none'} */
+      >
+        {children}
+      </Link>
+    </NextLink>
+  )
 }
 
+const Navbar = props => {
+  const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
 
-
-const Navbar = (props) => {
-    const {path} = props
-    return (
-        <Box
-        position='fixed'
-        as='nav'
-        w='100%'
-        bg={useColorModeValue('#ffffff40', '#20202380')}
-        style={{backdropFilter: 'blur(10px)'}}
+  const { path } = props
+  return (
+    <>
+      <div
+        onClick={onToggle}
+        style={{
+          position: 'fixed',
+          left: '50%',
+          transform: 'translate(-50%)',
+          cursor: 'pointer',
+          zIndex: '9999'
+        }}
+      >
+        <ElectricMenu isActive={isOpen} />
+      </div>
+      <Modal onToggle={onToggle} path={path} isOpen={isOpen} />
+      <Box
+        position="absolute"
+        as="nav"
+        w="100%"
+        bg={useColorModeValue('#ffffff40', '#13142a50')}
+        style={{ backdropFilter: 'blur(10px)' }}
         zIndex={1}
         {...props}
+      >
+        <Container
+          display="flex"
+          p={2}
+          maxW="container.md"
+          justifyContent="center"
+          wrap="wrap"
         >
-            <Container display='flex' p={2} maxW='container.md' justifyContent='center' wrap='wrap'> 
-                
-                <Stack
-                direction = {{base: 'column', md:'row'}}
-                display={{base: 'none', md:'flex'}}
-                width={{base: 'full', md: 'auto'}}
-                alignItems='center'
-                justifyContent='space-around'
-                flexGrow={1}
-                mt={{base: 4, md:0}}
-                >   
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            display={{ base: 'none', md: 'flex' }}
+            width={{ base: 'full', md: 'auto' }}
+            alignItems="center"
+            justifyContent="space-between"
+            flexGrow={1}
+            mt={{ base: 4, md: 0 }}
+          >
+            <LinkItem href="/" path={path}>
+              Home
+            </LinkItem>
 
-                    <Flex pt={1}>
-                        
-                            <Logo/>
-                        
-                    </Flex>
+            <LinkItem href="/about" path={path}>
+              About
+            </LinkItem>
 
-                    
+            <Box w={70}></Box>
 
-                    <LinkItem href='/posts' path={path}>
-                        Posts
-                    </LinkItem>
+            <LinkItem href="/works" path={path}>
+              Works
+            </LinkItem>
 
-                    <Menu>
-                        <MenuButton border='none' as={IconButton} icon={<HamburgerIcon/>} variant='outline' aria-label='Options'/> 
-                        <MenuList
-                        w='100vw'
-                        h='100vh'
-                        bgColor='black.50'
-                        zIndex={20}
-                        
-                        >
-                            <Stack
-                            direction={['column']}
-                            spacing='7rem'
-                            >
-                                <NextLink href='/' passHref>
-                                    <MenuItem as={Link} justifyContent='center'>About</MenuItem>
-                                </NextLink>
-                                <NextLink href='/works' passHref >
-                                    <MenuItem as={Link} justifyContent='center'>Works</MenuItem>
-                                </NextLink>
-                                <NextLink href='/posts' passHref>
-                                    <MenuItem as={Link} justifyContent='center'>Posts</MenuItem>
-                                </NextLink>
-                                <MenuItem as={Link} href='https://www.google.com' justifyContent='center'>View source</MenuItem>
-                            </Stack>
-                            
-                        </MenuList>
-                    </Menu>
-
-                    <LinkItem href='/works' path={path}>
-                        Works
-                    </LinkItem>
-
-                    <ThemeToggleButton/>
-
-                </Stack>
-                
-            </Container>
-        </Box>
-    )
+            <LinkItem href="/contact" path={path}>
+              Contact
+            </LinkItem>
+          </Stack>
+        </Container>
+      </Box>
+    </>
+  )
 }
 
 export default Navbar
