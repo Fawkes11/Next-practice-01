@@ -1,4 +1,4 @@
-import { Stack, transition } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import { LinkItem } from './navbar'
@@ -17,19 +17,31 @@ const leftDivVariants = {
     }
   },
   exit: {
-    x: -1000,
-    opacity: 0
+    x: -800,
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      bounce: 0.25
+    }
   }
 }
 
 const rightDivVariants = {
   hidden: {
-    x: 700,
+    x: 1000,
     opacity: 0
   },
   visible: {
     x: 0,
     opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.1
+    }
+  },
+  exit: {
+    x: 800,
+    opacity: 0,
     transition: {
       type: 'spring',
       bounce: 0.1
@@ -46,89 +58,94 @@ const stackVariants = {
     transition: {
       delay: 0.6
     }
+  },
+  exit: {
+    opacity: 0
   }
 }
 
-const Modal = ({ onToggle, path }) => {
+const Modal = ({ onToggle, path, isOpen }) => {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width: '100%',
-        height: '100vh',
-        zIndex: '999',
-        margin: '0',
-        padding: '0'
-      }}
-    >
-      <AnimatePresence>
-        <motion.div
-          variants={leftDivVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
+    <AnimatePresence>
+      {isOpen && (
+        <div
           style={{
-            position: 'absolute',
-            left: '-10%',
-            top: 0,
+            position: 'fixed',
+            width: '100%',
             height: '100vh',
-            width: '60%',
-            background: 'black',
-            zIndex: '1050',
-            color: 'white'
+            zIndex: '999',
+            margin: '0',
+            padding: '0',
+            overflow: 'hidden'
           }}
         >
-          <p>adsfasdfasd</p>
-        </motion.div>
-      </AnimatePresence>
-      <motion.div
-        variants={rightDivVariants}
-        initial="hidden"
-        animate="visible"
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 0,
-          height: '100vh',
-          width: '60%',
-          background: 'black',
-          zIndex: '1050'
-        }}
-      ></motion.div>
-      <motion.div
-        variants={stackVariants}
-        initial="hidden"
-        animate="visible"
-        style={{ position: 'relative', zIndex: '1100' }}
-      >
-        <Stack
-          direction="column"
-          spacing="4rem"
-          minH="100vh"
-          align="center"
-          justifyContent="center"
-          onClick={onToggle}
-        >
-          <LinkItem href="/" path={path}>
-            Home
-          </LinkItem>
+          <motion.div
+            variants={leftDivVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            style={{
+              position: 'absolute',
+              left: '-10%',
+              top: 0,
+              height: '100vh',
+              width: '60%',
+              background: '#13142a',
+              zIndex: '1050',
+              color: 'white'
+            }}
+          ></motion.div>
 
-          <LinkItem href="/about" path={path}>
-            About
-          </LinkItem>
+          <motion.div
+            variants={rightDivVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            style={{
+              position: 'absolute',
+              left: '50%',
+              top: 0,
+              height: '100vh',
+              width: '60%',
+              background: '#13142a',
+              zIndex: '1050'
+            }}
+          ></motion.div>
+          <motion.div
+            variants={stackVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            style={{ position: 'relative', zIndex: '1100' }}
+          >
+            <Stack
+              direction="column"
+              spacing="4rem"
+              minH="100vh"
+              align="center"
+              justifyContent="center"
+              onClick={onToggle}
+            >
+              <LinkItem href="/" path={path}>
+                Home
+              </LinkItem>
 
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
+              <LinkItem href="/about" path={path}>
+                About
+              </LinkItem>
 
-          <LinkItem href="/contact" path={path}>
-            Contact
-          </LinkItem>
-        </Stack>
-      </motion.div>
-    </div>
+              <LinkItem href="/works" path={path}>
+                Works
+              </LinkItem>
+
+              <LinkItem href="/contact" path={path}>
+                Contact
+              </LinkItem>
+            </Stack>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
   )
 }
 
