@@ -12,7 +12,7 @@ const Work = () => {
         <Section delay={0.2}>
           <Title>Fylo challenge</Title>
           <P>
-            Landing page layout made in vue js, it's a frontendmentor challenge.
+            Landing page layout made in vue js, it&apos;s a frontendmentor challenge.
           </P>
           <List ml={4} my={4}>
             <ListItem>

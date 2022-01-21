@@ -1,8 +1,8 @@
-import { Text, useColorModeValue } from '@chakra-ui/react'
+/* import { Text, useColorModeValue } from '@chakra-ui/react' */
 import { Icon } from '@chakra-ui/icon'
-import { FiHome, FiGithub } from 'react-icons/fi'
+import { FiHome } from 'react-icons/fi'
 import styled from '@emotion/styled'
-import Image from 'next/image'
+/* import Image from 'next/image' */
 import Link from 'next/link'
 
 const LogoBox = styled.span`
@@ -16,7 +16,7 @@ align-items; center;
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  /* const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png` */
   return (
     <Link href="/">
       <a>

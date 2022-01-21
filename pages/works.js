@@ -31,7 +31,7 @@ const Works = () => {
 
           <Section delay={0.1}>
             <WorkGridItem id="fylovue" title="Fylo" thumbnail={thumbFyloVue}>
-              Landing page layout made in vue js, it's a frontendmentor
+              Landing page layout made in vue js, it&apos;s a frontendmentor
               challenge
             </WorkGridItem>
           </Section>
@@ -42,7 +42,7 @@ const Works = () => {
               title="Huddle"
               thumbnail={thumbHuddleReact}
             >
-              Landing page layout made in vue js, it's a frontendmentor
+              Landing page layout made in vue js, it&apos;s a frontendmentor
               challenge
             </WorkGridItem>
           </Section>

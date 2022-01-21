@@ -1,31 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NextLink from 'next/link'
-import Logo from './logo'
+/* import Logo from './logo' */
 import {
   Container,
   Box,
-  Button,
   Link,
   Stack,
-  Flex,
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
-  IconButton,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   useColorModeValue
 } from '@chakra-ui/react'
 import ElectricMenu from './electric-menu'
-import ThemeToggleButton from './theme-toggle-button'
+/* import ThemeToggleButton from './theme-toggle-button'
 import { FiGithub } from 'react-icons/fi'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Icon } from '@chakra-ui/icon'
+import { Icon } from '@chakra-ui/icon' */
 import { useDisclosure } from '@chakra-ui/hooks'
 import Modal from './modal'
 
@@ -51,7 +38,7 @@ export const LinkItem = ({ href, path, children }) => {
 }
 
 const Navbar = props => {
-  const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure()
 
   const { path } = props
   return (
