@@ -64,12 +64,10 @@ const Page = () => {
             Hessler is a freelance and a full passion for building digial
             services/stuff he wants. He has a knack for all things lauching
             products, from planning and designing all the way to solving
-            real-life problems with code. When not online, he loves hanging out
-            with his camera. Currently he is living off of his own prodcut
-            called{' '}
-            <NextLink href="/works/inkdrop">
+            real-life problems with code. When not online, he loves learning 3D design.
+            {/* <NextLink href="/works/inkdrop">
               <Link>Inkdrop</Link>
-            </NextLink>
+            </NextLink> */}
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
@@ -88,11 +86,11 @@ const Page = () => {
             <BioYear>1992</BioYear>
             Born in Pasto, Nariño.
           </BioSection>
-          <BioSection>
+          {/* <BioSection>
             <BioYear>2010</BioYear>
             Completed the Master&apos;s Program in the graduate School of
             Information Science at Nara Institute of Sccence and technology
-          </BioSection>
+          </BioSection> */}
         </Section>
 
         <Section delay={0.3}>
