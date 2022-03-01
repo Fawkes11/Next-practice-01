@@ -23,7 +23,7 @@ const Work = () => {
             </ListItem>
             <ListItem>
               <Meta>Stack</Meta>
-              <span>Vue JS</span>
+              <span>Vue JS, GitHub Pages</span>
             </ListItem>
           </List>
           <WorkImage src="/images/works/huddle_react_preview.png" alt="fylo" />
