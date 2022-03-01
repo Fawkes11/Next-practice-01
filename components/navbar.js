@@ -24,7 +24,7 @@ export const LinkItem = ({ href, path, children }) => {
     <NextLink href={href}>
       <Link
         px={5}
-        py={2}
+        py={1}
         border={active ? '1px solid #01a9c1' : undefined}
         borderRadius="5px"
         /* bg={active ? 'glassTeal' : undefined} */

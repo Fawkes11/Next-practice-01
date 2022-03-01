@@ -8,7 +8,7 @@ function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x -1, 4))
 }
 
-const VoxelDog = () => {
+const BallTech = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
@@ -122,7 +122,7 @@ const VoxelDog = () => {
   return (
     <Box
       ref={refContainer}
-      className="voxel-dog"
+      className="ball-tech"
       m="auto"
       mt={['-40px', '-60px', '-120px']}
       mb={['-40px', '-140px', '-150px']}
@@ -144,4 +144,4 @@ const VoxelDog = () => {
   )
 }
 
-export default VoxelDog
+export default BallTech

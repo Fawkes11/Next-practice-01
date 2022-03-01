@@ -2,18 +2,25 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   Heading,
   Image,
   Link,
+  List,
+  ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import NextLink from 'next/link'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 import HeadSection from '../components/headSection'
+import { 
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillInstagram
+ } from "react-icons/ai";
 const Page = () => {
   return (
     <Layout title="Home">
@@ -47,7 +54,7 @@ const Page = () => {
                 borderColor="whiteAlpha.800"
                 borderWidth={2}
                 borderStyle="solid"
-                maxWidth="100px"
+                maxWidth="150px"
                 display="inline-block"
                 borderRadius="100%"
                 src="/images/hessler.jpg"
@@ -61,42 +68,49 @@ const Page = () => {
             Work
           </Heading>
           <Paragraph>
-            Hessler is a freelance and a full passion for building digial
-            services/stuff he wants. He has a knack for all things lauching
-            products, from planning and designing all the way to solving
-            real-life problems with code. When not online, he loves learning 3D design.
-            {/* <NextLink href="/works/inkdrop">
-              <Link>Inkdrop</Link>
-            </NextLink> */}
+            I&apos;m a freelance frontend developer based in Pasto, Colombia, I
+            enjoy coding and bringing ideas to life from small business to
+            interactive applications. When I&apos;m not programming, I love to
+            learn 3d modelling.
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                My Portfolio
+              <Button
+                rightIcon={<ArrowForwardIcon />}
+                colorScheme="teal"
+                variant="outline"
+              >
+                My Works
               </Button>
             </NextLink>
           </Box>
         </Section>
 
         <Section delay={0.2}>
-          <Heading as="h3" variant="section-title">
-            Bio
+          <Heading as="h3" textAlign="center" variant="section-title">
+            Social Media
           </Heading>
-          <BioSection>
-            <BioYear>1992</BioYear>
-            Born in Pasto, Nariño.
-          </BioSection>
-          {/* <BioSection>
-            <BioYear>2010</BioYear>
-            Completed the Master&apos;s Program in the graduate School of
-            Information Science at Nara Institute of Sccence and technology
-          </BioSection> */}
+          <List>
+            <ListItem >
+              <Link href='https://github.com/Fawkes11' target='_blank'>
+                <Button variant='ghost' leftIcon={<AiFillGithub/>}>Fawkes11</Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href='https://www.linkedin.com/in/hesslerinampuez' target='_blank'>
+                <Button variant='ghost' leftIcon={<AiFillLinkedin/>}>Linkedin</Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href='https://www.instagram.com/hessler_07/' target='_blank'>
+                <Button variant='ghost' leftIcon={<AiFillInstagram/>}>@hessler_07</Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
-
+        <Divider />
         <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            I {'<3'}
-          </Heading>
+          <p style={{textAlign: 'center'}}>2022</p>
         </Section>
       </Container>
     </Layout>

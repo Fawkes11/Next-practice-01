@@ -1,10 +1,15 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Container, Heading } from '@chakra-ui/react'
 import React from 'react'
 import HeadSection from '../components/headSection'
 import Layout from '../components/layouts/article'
+import NoSsr from '../components/no-ssr'
 import Section from '../components/section'
+import Form from '../components/form'
 
 const Contact = () => {
+
+  
+
   return (
     <Layout title="Contact">
       <Container>
@@ -14,11 +19,11 @@ const Contact = () => {
           </Heading>
         </HeadSection>
 
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.1}>Hola</Section>
-          <Section delay={0.1}>Contact</Section>
-          <Section delay={0.1}>!!</Section>
-        </SimpleGrid>
+        <Section delay={0.1}>
+          <NoSsr>
+            <Form />
+          </NoSsr>
+        </Section>
       </Container>
     </Layout>
   )
