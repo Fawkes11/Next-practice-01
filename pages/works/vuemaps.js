@@ -28,7 +28,7 @@ const Work = () => {
             </ListItem>
             <ListItem>
               <Meta>Stack</Meta>
-              <span>Vue JS, Google Maps API</span>
+              <span>Vue JS, Google Maps API, GitHub Pages</span>
             </ListItem>
           </List>
           <WorkImage src="/images/works/vue_maps_preview.png" alt="Vue_maps" />

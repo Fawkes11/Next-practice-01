@@ -24,7 +24,7 @@ const Work = () => {
             </ListItem>
             <ListItem>
               <Meta>Stack</Meta>
-              <span>React JS, .NET Framework, MySql</span>
+              <span>React JS, .NET Framework, MySql, GitHub Pages</span>
             </ListItem>
           </List>
           <WorkImage src="/images/works/restaurant_preview.png" alt="Inkdrop" />
