@@ -20,6 +20,7 @@ const Works = () => {
         </HeadSection>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
+
           <Section delay={0.1}>
             <WorkGridItem
               id="restaurant"
@@ -27,6 +28,16 @@ const Works = () => {
               thumbnail={thumbRestaurant}
             >
               An ecommerce for an Italian food restaurant
+            </WorkGridItem>
+          </Section>
+
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="mercadolibre"
+              title="MercadoLibre - Clone"
+              thumbnail={thumbRestaurant}
+            >
+              A clone of mercadolibre&apos;s homepage
             </WorkGridItem>
           </Section>
           
