@@ -7,6 +7,7 @@ import thumbRestaurant from '../public/images/works/restaurant_preview.png'
 import thumbFyloVue from '../public/images/works/fylo_vue_preview.png'
 import thumbHuddleReact from '../public/images/works/huddle_react_preview.png'
 import thumbVueMaps from '../public/images/works/vue_maps_preview.png'
+import thumbMercadoLibreClone from '../public/images/works/mercadolibre_preview.png'
 import HeadSection from '../components/headSection'
 
 const Works = () => {
@@ -35,7 +36,7 @@ const Works = () => {
             <WorkGridItem
               id="mercadolibre"
               title="MercadoLibre - Clone"
-              thumbnail={thumbRestaurant}
+              thumbnail={thumbMercadoLibreClone}
             >
               A clone of mercadolibre&apos;s homepage
             </WorkGridItem>

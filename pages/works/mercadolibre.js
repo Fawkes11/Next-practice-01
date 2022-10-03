@@ -13,12 +13,12 @@ const work = () => {
                     <Title>MercadoLibre</Title>
                     <P>
                         A project carried out to obtain the Alkemy certification,
-                        in order to demonstrate the capabilities of a frontend developer,
-                        using React Js to create interfaces, Redux for state management,
-                        Chakra UI to help create custom and reusable components, Formik
-                        to create forms and Yup for validation.
-                        It is created following the mobile first development approach
-                        for a good experience on all screen sizes.
+                        in order to demonstrate the capabilities of a frontend developer, 
+                        using React Js to create interfaces, React Router DOM for routing, 
+                        Redux for state management, Chakra UI to help create custom and 
+                        reusable components, Formik to create forms and Yup for validation.
+                        It is created following the mobile first development approach for a 
+                        good experience on all screen sizes.
                     </P>
                     <List ml={4} my={4}>
                         <ListItem>
@@ -29,10 +29,10 @@ const work = () => {
                         </ListItem>
                         <ListItem>
                             <Meta>Stack</Meta>
-                            <span>React JS, Redux, MercadoLibre API, GitHub Pages</span>
+                            <span>React JS, React Router DOM, Redux, Formik, Yup, MercadoLibre API, GitHub Pages</span>
                         </ListItem>
                     </List>
-                    <WorkImage src="/images/works/restaurant_preview.png" alt="mercadolibre" />
+                    <WorkImage src="/images/works/mercadolibre_preview.png" alt="mercadolibre" />
                 </Section>
             </Container>
         </Layout>
