@@ -22,7 +22,7 @@ const Work = () => {
           <List ml={4} my={4}>
             <ListItem>
               <Meta>Website</Meta>
-              <Link href="https://fawkes11.github.io/vue-maps/">
+              <Link href="https://fawkes11.github.io/vue-maps/" target="_blank">
                 Bot Race - Vue Maps <ExternalLinkIcon mx="2px" />
               </Link>
             </ListItem>

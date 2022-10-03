@@ -18,7 +18,7 @@ const Work = () => {
           <List ml={4} my={4}>
             <ListItem>
               <Meta>Website</Meta>
-              <Link href="https://fawkes11.github.io/deploy-store/#/">
+              <Link href="https://fawkes11.github.io/deploy-store/#/" target="_blank">
                 Restaurant - eCommerce <ExternalLinkIcon mx="2px" />
               </Link>
             </ListItem>
