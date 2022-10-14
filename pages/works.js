@@ -8,6 +8,7 @@ import thumbFyloVue from '../public/images/works/fylo_vue_preview.png'
 import thumbHuddleReact from '../public/images/works/huddle_react_preview.png'
 import thumbVueMaps from '../public/images/works/vue_maps_preview.png'
 import thumbMercadoLibreClone from '../public/images/works/mercadolibre_preview.png'
+import thumbBuildiaSite from '../public/images/works/testsite_preview.png'
 import HeadSection from '../components/headSection'
 
 const Works = () => {
@@ -41,7 +42,17 @@ const Works = () => {
               A clone of mercadolibre&apos;s homepage
             </WorkGridItem>
           </Section>
-          
+
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="buildia"
+              title="Construction company website"
+              thumbnail={thumbBuildiaSite}
+            >
+              Landing page developed with hubspot&apos;s content manager
+            </WorkGridItem>
+          </Section>
+
           <Section delay={0.1}>
             <WorkGridItem
               id="vuemaps"
