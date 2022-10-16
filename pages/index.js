@@ -16,11 +16,11 @@ import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import HeadSection from '../components/headSection'
-import { 
+import {
   AiFillGithub,
   AiFillLinkedin,
   AiFillInstagram
- } from "react-icons/ai";
+} from "react-icons/ai";
 const Page = () => {
   return (
     <Layout title="Home">
@@ -28,7 +28,7 @@ const Page = () => {
         <HeadSection delay={0.1}>
           <Box
             borderRadius="lg"
-            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+            bg={useColorModeValue('#ebd9c8', '#ebd9c888')}
             p="3"
             mb={6}
             align="center"
@@ -93,24 +93,24 @@ const Page = () => {
           <List>
             <ListItem >
               <Link href='https://github.com/Fawkes11' target='_blank'>
-                <Button variant='ghost' leftIcon={<AiFillGithub/>}>Fawkes11</Button>
+                <Button variant='ghost' leftIcon={<AiFillGithub />}>Fawkes11</Button>
               </Link>
             </ListItem>
             <ListItem>
               <Link href='https://www.linkedin.com/in/hesslerinampuez' target='_blank'>
-                <Button variant='ghost' leftIcon={<AiFillLinkedin/>}>Linkedin</Button>
+                <Button variant='ghost' leftIcon={<AiFillLinkedin />}>Linkedin</Button>
               </Link>
             </ListItem>
             <ListItem>
               <Link href='https://www.instagram.com/hessler_07/' target='_blank'>
-                <Button variant='ghost' leftIcon={<AiFillInstagram/>}>@hessler_07</Button>
+                <Button variant='ghost' leftIcon={<AiFillInstagram />}>@hessler_07</Button>
               </Link>
             </ListItem>
           </List>
         </Section>
         <Divider />
         <Section delay={0.3}>
-          <p style={{textAlign: 'center'}}>2022</p>
+          <p style={{ textAlign: 'center' }}>2022</p>
         </Section>
       </Container>
     </Layout>

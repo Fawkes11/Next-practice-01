@@ -4,7 +4,8 @@ import {
   FormHelperText,
   FormLabel,
   Input,
-  Textarea
+  Textarea,
+  useColorModeValue
 } from '@chakra-ui/react'
 import swal from 'sweetalert'
 import React, { useState } from 'react'
@@ -14,7 +15,7 @@ const Form = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const data = {
       name,
@@ -27,14 +28,14 @@ const Form = () => {
       method: 'post',
       body: JSON.stringify(data)
     })
-    .then((response) => {
-      if(response.ok){
-        swal("Message successfully sent!", "I will get back to you as soon as possible.", "success");
-      }
-    })
-    .catch(() => {
-      swal("Oops!", "There was a problem, try again ", 'error');
-    })
+      .then((response) => {
+        if (response.ok) {
+          swal("Message successfully sent!", "I will get back to you as soon as possible.", "success");
+        }
+      })
+      .catch(() => {
+        swal("Oops!", "There was a problem, try again ", 'error');
+      })
   }
 
 
@@ -45,6 +46,7 @@ const Form = () => {
         <Input
           id="name"
           placeholder="Name"
+          _placeholder={{ color: useColorModeValue('blackAlpha.600', 'blackAlpha.200') }}
           onChange={e => setName(e.target.value)}
         />
       </FormControl>
@@ -54,9 +56,9 @@ const Form = () => {
           id="email"
           type="email"
           placeholder="name@gmail.com"
+          _placeholder={{ color: useColorModeValue('blackAlpha.600', 'blackAlpha.200') }}
           onChange={e => setEmail(e.target.value)}
         />
-        <FormHelperText>We&apos;ll never share your email.</FormHelperText>
       </FormControl>
       <FormControl mt={5} isRequired>
         <FormLabel htmlFor="message">Message: </FormLabel>
@@ -64,6 +66,7 @@ const Form = () => {
           id="message"
           type="text"
           placeholder="Your message here"
+          _placeholder={{ color: useColorModeValue('blackAlpha.600', 'blackAlpha.200') }}
           onChange={e => setMessage(e.target.value)}
         />
       </FormControl>

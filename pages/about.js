@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { useColorModeValue } from '@chakra-ui/react'
 /* import { GridItem } from '../components/grid-item' */
 
 import HeadSection from '../components/headSection'
@@ -52,16 +53,16 @@ const About = () => (
           .
         </Paragraph>
         <Box align="center" my={4}>
-            <NextLink href="/resume.pdf">
-              <Button
-                rightIcon={<ArrowForwardIcon />}
-                colorScheme="teal"
-                variant="outline"
-              >
-                Resume
-              </Button>
-            </NextLink>
-          </Box>
+          <NextLink href="/resume.pdf">
+            <Button
+              rightIcon={<ArrowForwardIcon />}
+              colorScheme="teal"
+              variant="outline"
+            >
+              Resume
+            </Button>
+          </NextLink>
+        </Box>
         <br />
         <Box>
           <p>
@@ -73,27 +74,27 @@ const About = () => (
             style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)' }}
           >
             <ListItem>
-              <ListIcon as={IoLogoReact} color="blue.200" />
+              <ListIcon as={IoLogoReact} color={useColorModeValue('#007a7a', '#fea02f')} />
               React Js{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={IoLogoVue} color="blue.200" />
+              <ListIcon as={IoLogoVue} color={useColorModeValue('#007a7a', '#fea02f')} />
               Vue Js{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={IoLogoJavascript} color="blue.200" />
+              <ListIcon as={IoLogoJavascript} color={useColorModeValue('#007a7a', '#fea02f')} />
               JavaScript{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={SiNextdotjs} color="blue.200" />
+              <ListIcon as={SiNextdotjs} color={useColorModeValue('#007a7a', '#fea02f')} />
               Next Js{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={SiDotnet} color="blue.200" />
+              <ListIcon as={SiDotnet} color={useColorModeValue('#007a7a', '#fea02f')} />
               .Net{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={SiWordpress} color="blue.200" />
+              <ListIcon as={SiWordpress} color={useColorModeValue('#007a7a', '#fea02f')} />
               Wordpress{' '}
             </ListItem>
           </List>

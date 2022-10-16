@@ -29,13 +29,17 @@ export const LinkItem = ({ href, path, children }) => {
         borderRadius="5px"
         /* bg={active ? 'glassTeal' : undefined} */
         color={active ? '#01a9c1' : '#f4f5f5'}
-        /* _hover={'textDecoration: none'} */
+        _hover={{
+          textDecoration: 'none',
+          color: 'rgba(244, 70, 17, 0.5)'
+        }}
       >
         {children}
       </Link>
     </NextLink>
   )
 }
+
 
 const Navbar = props => {
   const { isOpen, onToggle } = useDisclosure()
