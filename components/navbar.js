@@ -15,6 +15,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Icon } from '@chakra-ui/icon' */
 import { useDisclosure } from '@chakra-ui/hooks'
 import Modal from './modal'
+import Triangle from './triangle'
 
 export const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -57,6 +58,7 @@ const Navbar = props => {
           zIndex: '9999'
         }}
       >
+        <Triangle/>
         <ElectricMenu isActive={isOpen} />
       </div>
       <Modal onToggle={onToggle} path={path} isOpen={isOpen} />
