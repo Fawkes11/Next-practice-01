@@ -8,6 +8,7 @@ import thumbFyloVue from '../public/images/works/fylo_vue_preview.png'
 import thumbHuddleReact from '../public/images/works/huddle_react_preview.png'
 import thumbVueMaps from '../public/images/works/vue_maps_preview.png'
 import thumbMercadoLibreClone from '../public/images/works/mercadolibre_preview.png'
+import thumbChatReact from '../public/images/works/chat_react_express.png'
 import thumbBuildiaSite from '../public/images/works/testsite_preview.png'
 import HeadSection from '../components/headSection'
 
@@ -30,6 +31,16 @@ const Works = () => {
               thumbnail={thumbRestaurant}
             >
               An ecommerce for an Italian food restaurant
+            </WorkGridItem>
+          </Section>
+
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="chatReactExpress"
+              title="Chat - React"
+              thumbnail={thumbChatReact}
+            >
+              A chat application with React - Socket IO
             </WorkGridItem>
           </Section>
 
