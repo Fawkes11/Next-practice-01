@@ -88,7 +88,7 @@ const Works = () => {
               title="Huddle"
               thumbnail={thumbHuddleReact}
             >
-              Landing page layout made in vue js, it&apos;s a frontendmentor
+              Landing page layout made in vue js, it&apos;s a frontendmentor, GitHub
               challenge
             </WorkGridItem>
           </Section>
