@@ -18,7 +18,7 @@ import HeadSection from '../components/headSection'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { IoLogoJavascript, IoLogoReact, IoLogoVue } from 'react-icons/io5'
-import { SiNextdotjs, SiWordpress, SiDotnet } from 'react-icons/si'
+import { SiNextdotjs, SiWordpress, SiDotnet, SiUnity, SiJquery  } from 'react-icons/si'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 const About = () => (
   <Layout title="About">
@@ -37,16 +37,10 @@ const About = () => (
           Work
         </Heading>
         <Paragraph>
-          Hi, my name is Hessler and I enjoy solving problems with code, I had
-          the opportunity to do a course as a systems technician when I was 13
-          years old, since then I love technology.
-          <br />
-          Intellectually curious, proactive, problem solver with attention to
-          detail. fan of 3D modelling and animations.
-          <br />
-          Interested in frontEnd (for the moment), if you want to develop
-          something cool, or you are a recruiter and you are interested in my
-          profile,{' '}
+          Hi, my name is Hessler, and I enjoy solving problems through code. 
+          I had the opportunity to take a systems technician course when I was 13, and since then, I&apos;ve been passionate about technology. 
+          I&apos;m intellectually curious, proactive, and a detail-oriented problem solver. I&apos;m also a fan of 3D modeling and animations. 
+          Currently, I&apos;m focused on frontend development. If you&apos;re interested in creating something cool or if you&apos;re a recruiter interested in my profile, feel free to {' '}
           <NextLink href="/contact">
             <Link>get in touch</Link>
           </NextLink>
@@ -90,12 +84,12 @@ const About = () => (
               Next Js{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={SiDotnet} color={useColorModeValue('#007a7a', '#fea02f')} />
-              .Net{' '}
+              <ListIcon as={SiUnity} color={useColorModeValue('#007a7a', '#fea02f')} />
+              Unity{' '}
             </ListItem>
             <ListItem>
-              <ListIcon as={SiWordpress} color={useColorModeValue('#007a7a', '#fea02f')} />
-              Wordpress{' '}
+              <ListIcon as={SiJquery} color={useColorModeValue('#007a7a', '#fea02f')} />
+              jQuery{' '}
             </ListItem>
           </List>
         </Box>

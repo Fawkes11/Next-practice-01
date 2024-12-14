@@ -68,10 +68,7 @@ const Page = () => {
             Work
           </Heading>
           <Paragraph>
-            I&apos;m a freelance frontend developer based in Pasto, Colombia, I
-            enjoy coding and bringing ideas to life from small business to
-            interactive applications. When I&apos;m not programming, I love to
-            learn 3d modelling.
+          I&apos;m a frontend developer based in Cali, Colombia, with experience creating interactive applications and gamification solutions to train customer service agents. I work closely with design and development teams to create responsive websites that look great and are pixel-perfect, using technologies like React, Next.js, and Tailwind. I enjoy turning creative ideas into functional applications, whether for small businesses or large projects. I also explore 3D graphics and technologies like Three.js and shaders, always looking for new ways to improve in development.
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
@@ -97,7 +94,7 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href='https://www.linkedin.com/in/hesslerinampuez' target='_blank'>
+              <Link href='https://www.linkedin.com/in/hessler-inampuez' target='_blank'>
                 <Button variant='ghost' leftIcon={<AiFillLinkedin />}>Linkedin</Button>
               </Link>
             </ListItem>
@@ -110,7 +107,7 @@ const Page = () => {
         </Section>
         <Divider />
         <Section delay={0.3}>
-          <p style={{ textAlign: 'center' }}>2022</p>
+          <p style={{ textAlign: 'center' }}>2024</p>
         </Section>
       </Container>
     </Layout>
