@@ -18,7 +18,7 @@ import HeadSection from '../components/headSection'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { IoLogoJavascript, IoLogoReact, IoLogoVue } from 'react-icons/io5'
-import { SiNextdotjs, SiWordpress, SiDotnet, SiUnity, SiJquery  } from 'react-icons/si'
+import { SiNextdotjs, SiUnity, SiJquery  } from 'react-icons/si'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 const About = () => (
   <Layout title="About">
